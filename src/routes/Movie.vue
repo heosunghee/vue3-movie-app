@@ -30,7 +30,7 @@
           <h3>Ratings</h3>
           <div class="rating-wrap">
             <div v-for="{ Source: name, Value: score } in theMovie.Ratings" :key="name" :title="name" class="rating">
-              <img :src="`https://raw.githubusercontent.com/ParkYoungWoong/vue3-movie-app/master/src/assets/${name}.png`" :alt="name">
+              <img :src="`https://raw.githubusercontent.com/uzen-stella/vue3-movie-app/master/src/assets/${name}.png`" :alt="name">
               <span>{{ score }}</span>
             </div>
           </div>
