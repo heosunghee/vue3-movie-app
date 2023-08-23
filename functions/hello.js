@@ -3,7 +3,7 @@ exports.handler = async function (event, context) {
     statusCode: 200,
     body: JSON.stringify({
       name: 'sunghee',
-      age: 33,
+      age: 23,
       email: 'tjdgml211018@naver.com'
     })
   }

@@ -1,7 +1,8 @@
 module.exports = {
   env: {
     browser: true,
-    node: true
+    node: true,
+    jest: true
   },
   extends: [
     //vue
@@ -15,19 +16,21 @@ module.exports = {
   parserOptions: {
     parser: 'babel-eslint'
   },
+
+  // 추가적인 코드 규칙 설정
   rules: {
-    "vue/html-closing-bracket-newline": ["error", {
-      "singleLine": "never",
-      "multiLine": "never"
-    }],
-    "vue/html-self-closing": ["error", {
-      "html": {
-        "void": "always",
-        "normal": "never",
-        "component": "always"
+    'vue/html-self-closing': ['error', {
+      html: {
+        void: 'always',
+        normal: 'never',
+        component: 'always'
       },
-      "svg": "always",
-      "math": "always"
+      svg: 'always',
+      math: 'always'
+    }],
+    'vue/html-closing-bracket-newline': ['error', {
+      singleline: 'never',
+      multiline: 'never'
     }]
   }
 }
