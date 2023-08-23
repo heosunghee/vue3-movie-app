@@ -4,17 +4,18 @@ const _require = id => require(require.resolve(id, { paths: [require.main.path] 
 
 // import
 // path: NodeJS에서 파일 및 디렉토리 경로 작업을 위한 전역 모듈
-const path = _require('path');
-const HtmlPlugin = _require('html-webpack-plugin');
-const CopyPlugin = _require('copy-webpack-plugin');
-const { VueLoaderPlugin } = _require('vue-loader');
+const path = require('path')
+const HtmlPlugin = require('html-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
+const { VueLoaderPlugin } = require('vue-loader')
 const Dotenv = require('dotenv-webpack')
 
 // export
 module.exports = {
   resolve: {
+    // 경로에서 확장자 생략 설정
     extensions: ['.js', '.vue'],
-    // 경로 별칭
+    // 경로 별칭 설정
     alias: {
       '~': path.resolve(__dirname, 'src'),
       'assets': path.resolve(__dirname, 'src/assets')
@@ -31,6 +32,7 @@ module.exports = {
     clean: true
   },
 
+  // 모듈 처리 방식 설정
   module: {
     rules: [
       {
@@ -81,6 +83,7 @@ module.exports = {
     new Dotenv()
   ],
 
+  // 개발 서버 옵션
   devServer: {
     host: 'localhost',
     port: 8079,
