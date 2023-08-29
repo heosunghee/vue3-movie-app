@@ -7,7 +7,7 @@ import Movie from '~/routes/Movie'
 describe('routes/Movie.vue', () => {
   let wrapper
   
-  beforeEach(async() => {
+  beforeEach(async () => {
     window.scrollTo = jest.fn()
     router.push('/movie/tt1234567')
     await router.isReady()
